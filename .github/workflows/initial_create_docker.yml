@@ -9,7 +9,7 @@ on:
 
 jobs:
   build:
-    runs-on: CSPC398
+    runs-on: self-hosted
     services:
       mysql:
         image: mysql:8.0
