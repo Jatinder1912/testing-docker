@@ -40,7 +40,7 @@ jobs:
         uses: isbang/compose-action@v1.5.1
         with:
           compose-file: "./compose.yaml"
-          compose-flags: docker-compose up
+          compose-flags: up
           services: |
             frontend
             backend
