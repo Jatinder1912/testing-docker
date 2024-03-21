@@ -42,6 +42,7 @@ jobs:
           compose-file: "./compose.yaml"
           compose-flags: up
           services: |
+            docker-compose up
             frontend
             backend
 env:
