@@ -9,7 +9,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: CSPC398
     services:
       mysql:
         image: mysql:8.0
