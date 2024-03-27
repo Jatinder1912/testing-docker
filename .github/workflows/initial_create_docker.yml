@@ -28,7 +28,7 @@ jobs:
       - uses: docker/build-push-action@v5
         with:
           context: .
-          file: ./Dockerfile
+          file: ./compose.yaml
           push: true
           tags: urlaubgegenhand/urlaubgegenhand:latest
 env:
