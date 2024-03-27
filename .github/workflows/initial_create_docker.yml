@@ -17,7 +17,7 @@ jobs:
       run: sudo apt-get update 
   
     - name: connect and pull
-      run: sshpass -p ${{ secrets.SSH_PASSWORD }} ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} 
+      run: sshpass -p ${{ secrets.SSH_PASSWORD }} scp -o PreferredAuthentications=password -r ./* ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:~/docker_work_dir/
   
     - name: Docker run
       run: docker compose up
