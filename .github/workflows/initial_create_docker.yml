@@ -30,7 +30,7 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: urlaubgegenhand/urlaubgegenhand:latest
+          tags: ${{ secrets.DOCKER_USERNAME }}/urlaubgegenhand:latest
 env:
     DOCKER_BUILDKIT_ARGS: "--build-arg USER=root --build-arg DEBUG=1"
       
