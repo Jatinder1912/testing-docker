@@ -17,7 +17,7 @@ jobs:
       run: sudo apt-get update && sudo apt-get install -y sshpass
   
     - name: connect and pull
-      run: sshpass -p ${{ secrets.SSH_PASSWORD }} scp -o PreferredAuthentications=password -r ./* ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:~/docker_work_dir/
+      run: sshpass -p ${{ secrets.SSH_PASSWORD }} ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} "cd ${{ secrets.WORK_DIR }} && git checkout ${{ secrets.MAIN_BRANCH }} && git pull && exit"
   
     - name: Docker run
       run: docker compose up
