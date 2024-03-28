@@ -35,7 +35,7 @@ jobs:
           cd ${{ secrets.WORK_DIR }}
           git pull origin 
           git status
-          docker-compose up --build
+          docker-compose up -d
       - name: cleanup
         run: rm -rf ~/.ssh
       
