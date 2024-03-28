@@ -28,10 +28,10 @@ jobs:
         username: ${{ secrets.SSH_USER }}
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         port: 22
-        script: |
-          cd ${{ secrets.WORK_DIR }}
-          git pull origin 
-          git status
+        #script: |
+          #cd ${{ secrets.WORK_DIR }}
+          #git pull origin 
+          #git status
     - name: cleanup
       run: rm -rf ~/.ssh
 
